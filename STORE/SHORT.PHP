@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="js/yves_pos_save.js"></script>
+    <script src="../js/yves_pos_save.js"></script>
     <link rel="stylesheet" href="../css/1cssstore.css">
     <title>SHORT</title>
 </head>
@@ -38,7 +38,7 @@
                     <div class="dropdown my-2">
                         <button type="button" class="btn btn-danger">SEARCH</button>
                         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Short
+                            SHORT
                         </button>
                         <ul class="dropdown-menu mb-3">
                             <li><a class="dropdown-item" href="PANTS.PHP">PANTS</a></li>
@@ -70,10 +70,10 @@
 
                         <div class="col">
 
-                            <ul class="list-group">
+                        <ul class="list-group">
                                 <li class="list-group-item border-0">
                                     <div class="row align-items-center">
-                                        <div class="col-md-6">
+                                        <div class="col-md-6" style="white-space:nowrap;">
                                             Name of an Item:
                                         </div>
                                         <div class="col-md-6">
@@ -81,40 +81,36 @@
                                         </div>
                                     </div>
                                 </li>
-
                                 <li class="list-group-item border-0">
                                     <div class="row align-items-center">
                                         <div class="col-md-6">
                                             Quantity:
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id="Quantity">
+                                            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" id="Quantity" min="1">
                                         </div>
                                     </div>
                                 </li>
-
                                 <li class="list-group-item border-0">
                                     <div class="row align-items-center">
                                         <div class="col-md-6">
                                             Price:
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" disabled id="Price">
+                                            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" disabled id="ItemPrice">
                                         </div>
                                     </div>
                                 </li>
-
                                 <li class="list-group-item border-0">
                                     <div class="row align-items-center">
-                                        <div class="col-md-6">
+                                        <div class="col-md-6" style="white-space:nowrap;">
                                             Discount Amount:
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" disabled id="Discount">
+                                            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" disabled id="Discount">
                                         </div>
                                     </div>
                                 </li>
-
                                 <li class="list-group-item border-0">
                                     <div class="row align-items-center">
                                         <div class="col-md-6">
@@ -126,7 +122,6 @@
                                     </div>
                                 </li>
                             </ul>
-
                             <ul class="list-group">
                                 <li class="list-group-item border-0">
                                     <div class="row align-items-center">
@@ -134,33 +129,30 @@
                                             Total Quantity:
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" disabled id="TotalQuantity">
+                                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" disabled id="totalQuantity">
                                         </div>
                                     </div>
                                 </li>
-
                                 <li class="list-group-item border-0">
                                     <div class="row align-items-center">
-                                        <div class="col-md-6">
+                                        <div class="col-md-6" style="white-space:nowrap;">
                                             Total Discount Given:
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" disabled id="TotalDiscount">
+                                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" disabled id="totalDiscount">
                                         </div>
                                     </div>
                                 </li>
-
                                 <li class="list-group-item border-0">
                                     <div class="row align-items-center">
                                         <div class="col-md-6">
                                             Total Discounted Amount:
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" disabled id="TotalDiscounted">
+                                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" disabled id="totalDiscounted">
                                         </div>
                                     </div>
                                 </li>
-
                                 <li class="list-group-item border-0">
                                     <div class="row align-items-center">
                                         <div class="col-md-6">
@@ -171,7 +163,6 @@
                                         </div>
                                     </div>
                                 </li>
-
                                 <li class="list-group-item border-0">
                                     <div class="row align-items-center">
                                         <div class="col-md-6">
@@ -183,36 +174,37 @@
                                     </div>
                                 </li>
                             </ul>
-
                         </div>
                         <!-- calculator -->
-                        <div class="col">
+                        <div class="col-6">
                             <!-- radio -->
                             <div>
-                                <ul class="list-group list-group-horizontal">
-                                    <li class="list-group-item">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="senior" onclick="handleDiscounts(0.30)">
-                                        <label class="form-check-label" for="flexRadioDefault1">Senior Citizen</label>
+                                <ul class="list-group list-group-horizontal gap-5">
+                                    <li class="" style="list-style-type: none;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="senior" value='Senior Citizen' onclick="handleDiscounts(0.30)">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Senior Citizen
+                                        </label>
                                     </li>
-
-                                    <li class="list-group-item"> <input class="form-check-input" type="radio" name="flexRadioDefault" id="DiscountCard" onclick="handleDiscounts(0.20)">
-                                        <label class="form-check-label" for="flexRadioDefault1">With Disc. Card</label>
+                                    <li class="" style="list-style-type: none;"> <input class="form-check-input" type="radio" name="flexRadioDefault" value='Discount Card' id="discountCard" onclick="handleDiscounts(0.20)">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            With Disc. Card
+                                        </label>
                                     </li>
-
-                                    <li class="list-group-item"> <input class="form-check-input" type="radio" name="flexRadioDefault" id="Employee" onclick="handleDiscounts(0.15)">
-                                        <label class="form-check-label" for="flexRadioDefault1">Employee Disc.</label>
+                                    <li class="" style="list-style-type: none;"> <input class="form-check-input" type="radio" name="flexRadioDefault" value='Employee Discount' id="employee" onclick="handleDiscounts(0.15)">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Employee Disc.
+                                        </label>
                                     </li>
-
-                                    <li class="list-group-item"> <input class="form-check-input" type="radio" name="flexRadioDefault" id="noDiscount" onclick="handleDiscounts(0)">
-                                        <label class="form-check-label" for="flexRadioDefault1">No Disc.</label>
+                                    <li class="" style="list-style-type: none;"> <input class="form-check-input" type="radio" name="flexRadioDefault" value='No discount' id="noDiscount" onclick="handleDiscounts(0)">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            No Disc.
+                                        </label>
                                     </li>
                                 </ul>
                             </div>
-
                             <!-- buttons -->
-
-                            <div class="my-3 w-75">
-
+                            <div class="my-3 w-100">
                                 <div class="row row-cols-4 mb-3">
                                     <div class="col">
                                         <button type="button" class="btn btn-primary w-120" onclick="handleChange()">Calculate Change</button>
@@ -221,99 +213,78 @@
                                         <button type="button" class="btn btn-danger w-100" onclick="handleNew()">New</button>
                                     </div>
                                     <div class="col">
-                                        <button type="button" class="btn btn-warning w-100">Save</button>
+                                        <button type="button" class="btn btn-warning w-100" id='save'>Save</button>
                                     </div>
                                     <div class="col">
                                         <button type="button" class="btn btn-dark w-100">Update</button>
                                     </div>
                                 </div>
-
                                 <div class="row row-cols-5">
                                     <div class="col-3">
                                         <button type="button" class="btn btn-primary h-100 w-100" onclick="handleCalculator()">Enter</button>
                                     </div>
-
                                     <div class="col-9">
                                         <div class="row row-cols-3">
                                             <div class="col">
                                                 <button type="button" class="btn btn-dark w-100 mb-1" onclick="document.getElementById('Cash').value += '/'">/</button>
                                             </div>
-
                                             <div class="col">
                                                 <button type="button" class="btn btn-dark w-100 mb-1" onclick="document.getElementById('Cash').value += '*'">*</button>
                                             </div>
-
                                             <div class="col">
                                                 <button type="button" class="btn btn-dark w-100 mb-1" onclick="document.getElementById('Cash').value += '-'">-</button>
                                             </div>
-
                                             <div class="col">
                                                 <button type="button" class="btn btn-dark w-100 mb-1" onclick="document.getElementById('Cash').value += '+'">+</button>
                                             </div>
-
                                             <div class="col">
                                                 <button type="button" class="btn btn-dark w-100 mb-1" onclick="document.getElementById('Cash').value += '9'">9</button>
                                             </div>
-
                                             <div class="col">
                                                 <button type="button" class="btn btn-dark w-100 mb-1" onclick="document.getElementById('Cash').value += '8'">8</button>
                                             </div>
-
                                             <div class="col">
                                                 <button type="button" class="btn btn-dark w-100 mb-1" onclick="document.getElementById('Cash').value += '7'">7</button>
                                             </div>
-
                                             <div class="col">
                                                 <button type="button" class="btn btn-dark w-100 mb-1" onclick="document.getElementById('Cash').value += '6'">6</button>
                                             </div>
-
                                             <div class="col">
                                                 <button type="button" class="btn btn-dark w-100 mb-1" onclick="document.getElementById('Cash').value += '5'">5</button>
                                             </div>
-
                                             <div class="col">
                                                 <button type="button" class="btn btn-dark w-100 mb-1" onclick="document.getElementById('Cash').value += '4'">4</button>
                                             </div>
-
                                             <div class="col">
                                                 <button type="button" class="btn btn-dark w-100 mb-1" onclick="document.getElementById('Cash').value += '3'">3</button>
                                             </div>
-
                                             <div class="col">
                                                 <button type="button" class="btn btn-dark w-100 mb-1" onclick="document.getElementById('Cash').value += '2'">2</button>
                                             </div>
-
                                             <div class="col">
                                                 <button type="button" class="btn btn-dark w-100 mb-1" onclick="document.getElementById('Cash').value += '1'">1</button>
                                             </div>
-
                                             <div class="col">
                                                 <button type="button" class="btn btn-dark w-100 mb-1" onclick="document.getElementById('Cash').value += '0'">0</button>
                                             </div>
-
                                             <div class="col">
                                                 <button type="button" class="btn btn-dark w-100 mb-1" onclick="document.getElementById('Cash').value += '.'">.</button>
                                             </div>
-
                                         </div>
-
                                     </div>
-
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
                 </div>
+            </main>
         </div>
-
-        <script>
-            TotalQuantity = 0
-            TotalDiscount = 0
-            TotalDiscounted = 0
-        </script>
+    </div>
+    <script>
+        totalQuantity = 0
+        totalDiscount = 0
+        totalDiscounted = 0
+    </script>
         <script src="../js/Calculator.js" defer></script>
         <script src="../js/Changebutton.js" defer></script>
         <script src="../js/Discount.js" defer></script>

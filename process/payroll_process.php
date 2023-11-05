@@ -85,6 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $salary_loan = $_POST["salary_loan"];
         $other_loans = $_POST["other_loans"];
         $qualified_dependents = $_POST["qualified_dependents"];
+
         $basic_income_cutoff = $basic_rate_hour * $basic_num_hours_cutoff;
         $hono_income_cutoff = $hono_rate_hour * $hono_num_hours_cutoff;
         $other_income_cutoff = $other_rate_hour * $other_num_hours_cutoff;
@@ -449,7 +450,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['total_deduct'] = $total_deduct;
         $_SESSION['gross_income'] = $gross_income;
         $_SESSION['net_income'] = $net_income;
-
 
         // to press NEW button
     } else if (isset($_POST["new"])) {

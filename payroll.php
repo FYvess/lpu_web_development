@@ -37,13 +37,15 @@ require_once('process/payroll_process.php');
         <div class="flex-grow-1">
             <div class="container border bg-white">
                 <h1 class="d-flex justify-content-center m-2" style="font-size:30px;">YVES'S Choice Payroll</h1>
+                <!-- form inputs -->
                 <form class="row" method="post">
                     <div class="col">
                         <div class="d-flex justify-content-center align-items-center flex-column">
                             <h1 class="fs-5 mx-4">Employee Basic Info:</h1>
-                            <div class="card" style="width: 250px;height:250px;">
+                            <div class="card mb-3 mx-4" style="width: 14rem;">
+                            <div class="card" style="width: 250px;height:250px;"></div>
+                                <input type="file" class="p-1">
                             </div>
-                            <input type="file" class="p-1" padding: 5px>
                         </div>
 
                         <div class="col d-flex justify-content-center">
@@ -387,6 +389,7 @@ require_once('process/payroll_process.php');
                                         </div>
                                     </div>
                                 </li>
+
                                 <li class="list-group-item border-0">
                                     <div class="row row-cols-3 align-items-center gap-2 mt-3 g-0 pe-4">
                                         <div class="col-4">
