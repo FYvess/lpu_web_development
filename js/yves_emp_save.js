@@ -1,3 +1,17 @@
+function displayImage() {
+  var fileInput = document.getElementById("uploadfile");
+  var picBox = document.getElementById("pic-box");
+  var picPathInput = document.getElementById("picpath");
+
+  if (fileInput.files && fileInput.files[0]) {
+    var imageUrl = "temp/" + fileInput.files.item(0).name;
+
+    picBox.style.backgroundImage = `url(${imageUrl})`;
+    picBox.style.backgroundSize = "cover";
+    picPathInput.value = imageUrl;
+  }
+}
+
 $(document).ready(function () {
     $("#save").click(function (e) {
       e.preventDefault();
@@ -33,8 +47,7 @@ $(document).ready(function () {
             dataType:'json',
             success: function(result){
                 if(result.ok){
-                    $('#pic-box').html('')
-                    $('#pic-box').append("<img src='" + result.temp_path + "' style='width:100%;height:100%'/>")
+                  displayImage()
                 }else{
                     alert('Error occured')
                 }
